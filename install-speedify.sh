@@ -7,4 +7,6 @@ sudo apt-get install speedify
 /usr/share/speedify/speedify_cli mode streaming
 /usr/share/speedify/speedify_cli login <login> <password>
 /usr/share/speedify/speedify_cli connect closest
+sudo cp speedify.conf /etc/speedify
+sudo service speedify-sharing restart
 
