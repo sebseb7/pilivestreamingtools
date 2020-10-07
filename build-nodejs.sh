@@ -3,7 +3,7 @@ tar -xzf node-v12.18.4.tar.gz
 rm node-v12.18.4.tar.gz
 cd node-v12.18.4
 ./configure
-make -j2
+make
 sudo make install
 cd ..
 sudo npm i -g pm2
