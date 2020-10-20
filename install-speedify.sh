@@ -24,4 +24,4 @@ sudo apt-get -y install speedify
 /usr/share/speedify/speedify_cli connect closest
 sudo cp speedify.conf /etc/speedify
 sudo service speedify-sharing restart
-
+sudo cp /usr/share/speedify/speedify_cli /usr/bin/speedify 
