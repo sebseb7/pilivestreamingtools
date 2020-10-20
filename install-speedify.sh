@@ -10,7 +10,7 @@ echo "WIFI_PASSWORD=\"$REPLY\"" >> speedify.conf
 
 read -p "Speedify login:"
 sp_login=$REPLY
-read -p "Speedify password:"
+read -s -p "Speedify password (not displayed):"
 sp_pass=$REPLY
 
 curl https://get.speedify.com/pgp.key | sudo apt-key add
