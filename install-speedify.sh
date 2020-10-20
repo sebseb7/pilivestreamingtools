@@ -13,6 +13,11 @@ sp_login=$REPLY
 read -s -p "Speedify password (not displayed):"
 sp_pass=$REPLY
 
+sudo echo "address=/pi.status/192.168.145.1" > /etc/dnsmasq.d/static 
+sudo echo "server=8.8.8.8" >> /etc/dnsmasq.d/static 
+sudo echo "server=1.1.1.1" >> /etc/dnsmasq.d/static 
+
+
 curl https://get.speedify.com/pgp.key | sudo apt-key add
 sudo sh -c 'echo deb http://apt.connectify.me/ speedify main > /etc/apt/sources.list.d/connectify.list'
 sudo apt-get update
@@ -24,4 +29,6 @@ sudo apt-get -y install speedify
 /usr/share/speedify/speedify_cli connect closest
 sudo cp speedify.conf /etc/speedify
 sudo service speedify-sharing restart
-sudo cp /usr/share/speedify/speedify_cli /usr/bin/speedify 
+sudo cp /usr/share/speedify/speedify_cli /usr/bin/speedify
+
+./install-status.js
