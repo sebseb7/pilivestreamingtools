@@ -1,0 +1,1 @@
+/home/pi/pilivestreamingtools/build-rtl8812au.sh
