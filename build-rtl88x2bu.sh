@@ -15,3 +15,5 @@ make -j4
 sudo make install
 
 cd ..
+
+sudo modprobe 88x2bu
