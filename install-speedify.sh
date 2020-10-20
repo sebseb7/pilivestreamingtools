@@ -13,9 +13,8 @@ sp_login=$REPLY
 read -s -p "Speedify password (not displayed):"
 sp_pass=$REPLY
 
-sudo echo "address=/pi.status/192.168.145.1" > /etc/dnsmasq.d/static 
-sudo echo "server=8.8.8.8" >> /etc/dnsmasq.d/static 
-sudo echo "server=1.1.1.1" >> /etc/dnsmasq.d/static 
+sudo mkdir /etc/dnsmasq.d
+sudo cp static /etc/dnsmasq.d
 
 
 curl https://get.speedify.com/pgp.key | sudo apt-key add
