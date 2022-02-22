@@ -1,3 +1,5 @@
+./build-libsrt.sh
+
 git clone -b master --single-branch --depth 1 https://github.com/FFmpeg/FFmpeg.git
 cd FFmpeg
 wget https://github.com/lgeek/FFmpeg/commit/10a7ccaceb56cd4ed1275a155900fb6087fe9f56.diff
