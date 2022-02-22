@@ -16,4 +16,6 @@ sudo dkms add -m $PACKAGE_NAME -v $PACKAGE_VERSION
 sudo dkms build -m $PACKAGE_NAME -v $PACKAGE_VERSION
 sudo dkms install -m $PACKAGE_NAME -v $PACKAGE_VERSION
 
+cd ..
+
 sudo modprobe 88x2bu
