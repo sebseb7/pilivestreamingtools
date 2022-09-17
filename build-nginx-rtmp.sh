@@ -6,10 +6,10 @@ wget https://patch-diff.githubusercontent.com/raw/arut/nginx-rtmp-module/pull/14
 cat 1450.diff | patch -p1
 cd ..
 
-wget -4 http://nginx.org/download/nginx-1.20.2.tar.gz
-tar -xzf nginx-1.20.2.tar.gz
-rm nginx-1.20.2.tar.gz
-cd nginx-1.20.2
+wget -4 http://nginx.org/download/nginx-1.22.0.tar.gz
+tar -xzf nginx-1.22.0.tar.gz
+rm nginx-1.22.0.tar.gz
+cd nginx-1.22.0
 ./configure --with-http_v2_module --with-http_ssl_module --without-http_fastcgi_module --without-http_rewrite_module --without-http_scgi_module --without-http_uwsgi_module --add-module=../nginx-rtmp-module
 make -j4
 sudo make install
